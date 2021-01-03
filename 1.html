@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+	//99乘法表
+    // for (i = 1; i < 10; i++) {
+    //     for (j = 1; j <= i; j++)
+    //         console.log(j + "x" + i + "=" + i * j);
+    //     console.log("\n");
+    // }
+	
+	
+    // function sum(a, b) {
+    //     var all = 0;
+    //     for (i = 1; i <= b; i++) {
+    //         all = all + i;
+
+
+    //     }
+    //     console.log(all);
+    //     return all;
+
+
+    // }
+    // c = sum(1, 100);
+    // alert(c);
+    // var lianpo = {
+    //     name: 'old',
+    //     age: 60,
+    //     sex: 'male',
+    //     attack: function () {
+
+    //         console.log('attack');
+    //     }
+
+    // }
+    // console.log(lianpo.name);
+    // console.log(lianpo['age']);
+    // function hero(name, type, blood, attack) {
+
+    //     this.name = name;
+    //     this.type = type;
+    //     this.blood = blood;
+    //     this.attack = attack;
+
+
+
+    // }
+    // var houyi = new hero('后羿', '近战', 100, 500);//构造函数  创建一个后羿对象 
+    // console.log(houyi.name);
+    // console.log(houyi.attack);
+    // console.log(houyi)
+    // //遍历对象的值
+    // for (var k in houyi)
+    //     console.log(houyi[k]);
+	
+// 时间格式化start
+	// function getTime(){
+	// 	var date = new Date();
+	// 	var hours = date.getHours();
+	// 	hours=hours<10 ? '0'+h : hours;
+	// 	var minuetes=date.getMinutes();
+	// 	minuetes=minuetes<10 ? '0'+minuetes:minuetes;
+	// 	var second=date.getSeconds();
+	// 	second= second<10 ? '0'+second:second;
+	// 	alert('现在是 :'+hours+'点'+minuetes+'分'+second+'秒');
+		
+	// }
+	// getTime();
+// 时间格式化end
+// 数组去重
+	// function unique(arr) {
+	// 		var newArr=[];
+	// 		for(var i = 0; i <arr.length; i++)
+	// 		{
+	// 			if(newArr.indexOf(arr[i]) === -1)
+	// 			{
+	// 				newArr.push(arr[i]);
+	// 			}
+				
+				
+	// 		}
+	// 		return newArr;
+	// }
+	// var demo= unique(['a','v','v','a']);
+	// console.log(demo);
+	// 数组去重
+	var arr=['a','b','c','g'];
+	console.log(arr.toString());
+	console.log(arr.join('_')); //自定义数组内容的分隔符 ，默认逗号
+</script>
+
+<body>
+
+</body>
+
+</html>

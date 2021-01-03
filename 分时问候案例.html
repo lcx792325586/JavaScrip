@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>亲 上午好</div>
+    <img src="images/andriod.png" alt="">
+    <script>
+        var div = document.querySelector('div');
+        var img = document.querySelector('img');
+        var date = new Date();
+        h = date.getHours();
+        m = date.getMinutes();
+
+
+        if (h < 12) {
+
+            div.innerHTML = '上午好，现在是' + h + '点' + m + '分';
+            img.src = 'images/php5.0.png';
+
+        }
+        if (12 < h < 18) {
+            div.innerHTML = '下午好，现在是' + h + '点' + m + '分';
+            img.src = 'images/andriod.png';
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

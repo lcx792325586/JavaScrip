@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .nav {
+            height: 20px;
+            width: 500px;
+            margin: 100px auto;
+
+
+        }
+
+        .nav .navul li {
+            float: left;
+            list-style: none;
+            padding-right: 20px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navul li ul {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+
+        <ul class="navul">
+            <li>
+                <a href="">微博</a>
+                <ul class="first">
+                    <p>私信</p>
+                    <p>评论</p>
+                    <p>@我</p>
+                </ul>
+
+            </li>
+            <li>
+                <a href="">博客</a>
+                <ul class="second">
+                    <p>个人</p>
+                    <p>注册</p>
+                    <p>登陆</p>
+                </ul>
+
+            </li>
+            <li>
+                <a href="">邮箱</a>
+                <ul class="third">
+                    <p>用户</p>
+                    <p>网址</p>
+                    <p>未读</p>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+    <script>
+
+        var nav = document.querySelector('.navul');
+        var lis = nav.children;//得到3个小li
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++) {
+
+            lis[i].onmouseover = function () {
+
+                this.children[1].style.dispaly = 'block';
+                console.log(this.children[1].style.dispaly);
+
+            }
+            lis[i].onmouseout = function () {
+
+                this.children[1].style.dispaly = 'none';
+                console.log(this.children[1].style.dispaly);
+            }
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

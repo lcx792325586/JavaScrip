@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>图片会在2秒后隐藏</p>
+        <img src="images/andriod.png" alt="">
+        <button>停止计时器</button>
+    </div>
+    <script>
+
+        var div = document.querySelector('div');
+        var btn = document.querySelector('button');
+
+
+        function block() {
+            console.log('hahah');
+            div.style.display = 'none';
+
+        }
+        var time1 = window.setTimeout(block, '2000');
+        btn.addEventListener('click', function () {
+
+            window.clearTimeout(time1);//清楚定时器
+
+        });
+        var i = 0;
+        window.setInterval(function () {
+
+
+            i++;
+            console.log('执行了' + i + '次');
+
+        }, '2000');//间隔2秒触发一次程序
+
+
+
+    </script>
+
+
+</body>
+
+</html>

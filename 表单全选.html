@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead {
+            background-color: #a588f3;
+        }
+
+        tbody {
+            background-color: rgba(83, 64, 64, 0.863);
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+
+        <thead>
+            <tr>
+                <td><input type="checkbox" id="slectAll"></td>
+                <td>产品</td>
+                <td>价格</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>苹果8</td>
+                <td>5000</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>电脑</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>苹果7</td>
+                <td>4000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>苹果6</td>
+                <td>3000</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+
+        var slect = document.getElementById('slectAll');
+        var td = document.querySelector('tbody').querySelectorAll('input');
+        var flag = 0;
+        slect.onclick = function () {
+            if (flag == 0) {
+
+                for (var i = 0; i < td.length; i++) {
+
+                    td[i].checked = "checked";
+
+
+
+                }
+                flag = 1;
+            }
+            else if (flag == 1) {
+                for (var i = 0; i < td.length; i++) {
+
+                    td[i].checked = "";
+
+
+
+                }
+                flag = 0;
+
+
+
+            }
+
+        }
+        for (var i = 0; i < td.length; i++) {
+
+            td[i].onclick = function () {
+                var fl = true;
+                for (var i = 0; i < td.length; i++) {
+
+                    if (td[i].checked == false)
+                        fl = false;
+
+                }
+                slect.checked = fl;
+
+
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

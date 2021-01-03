@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            height: 80px;
+            width: 490px;
+            margin: 100px auto;
+            list-style: none;
+            background-color: blue;
+            padding-right: 40px;
+
+
+
+        }
+
+        ul li {
+            float: left;
+            margin-left: 2px;
+
+        }
+
+        li img {
+
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=".baidu">
+        <ul>
+            <li><img src="images/hybrid.png" alt=""></li>
+            <li><img src="images/php5.0.png" alt=""></li>
+            <li><img src="images/andriod.png" alt=""></li>
+            <li><img src="images/angular2.png" alt=""></li>
+        </ul>
+
+
+
+
+
+    </div>
+    <script>
+        var img = document.querySelectorAll('img');
+
+
+        var body = document.querySelector('body');
+
+        for (var i = 0; i < img.length; i++) {
+            img[i].onclick = function () {
+
+                console.log(this.src);
+                body.style.backgroundImage = 'url(' + this.src + ')';
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

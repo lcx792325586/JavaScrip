@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            width: 300px;
+            background-color: #f6f6f6;
+        }
+
+        li a {
+
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>提交</button>
+        <ul></ul>
+
+    </div>
+    <!-- <script>
+
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+
+        btn.onclick = function () {
+            if (text.value == "") {
+                alert('没有输入数据');
+                return false;
+            }
+            else {
+                var li = document.createElement('li');//1.创建节点
+                li.innerHTML = text.value;
+                // ul.appendChild(li);  //2. 添加节点Element.appendChild();  在最后添加
+                ul.insertBefore(li, ul.children[0]);// 在开始添加*element.insertBefore(插入节点，被插的节点)
+                text.value = null;//清空文本框
+            }
+
+        }
+
+
+
+    </script> -->
+    <script>
+
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+
+
+        btn.onclick = function () {
+            if (text.value == "") {
+                alert('没有输入数据');
+                return false;
+            }
+            else {
+                var li = document.createElement('li');//1.创建节点
+                li.innerHTML = text.value + ' <a href="javascript:;">删除</a>';
+                // ul.appendChild(li);  //2. 添加节点Element.appendChild();  在最后添加
+                var as = document.querySelectorAll('a');
+
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function () {
+
+                        alert('a a ');
+
+                    }
+
+
+
+                }
+                ul.insertBefore(li, ul.children[0]);// 在开始添加*element.insertBefore(插入节点，被插的节点)
+                text.value = null;//清空文本框
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

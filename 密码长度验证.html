@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input {
+
+            margin: 100px auto;
+            margin-left: 540px;
+            outline: none;
+        }
+
+        .img {
+
+            width: 25px;
+        }
+
+        .right {
+
+
+            color: green;
+            background: url(images/fa-search.png) no-repeat;
+
+
+        }
+
+        .wrong {
+
+
+            color: red;
+            background: url(images/angular2.png) no-repeat;
+        }
+
+        .text {
+            padding-left: 50px;
+
+            background: url(images/hot.png) no-repeat;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input class="input" type="password">
+
+        <i class="text"> 输入密码</i>
+
+
+    </div>
+    <script>
+        var pwd = document.querySelector('.input');
+        var img = document.querySelector('.img');
+        var text = document.querySelector('.text');
+        //  焦点离开时判断
+        pwd.onblur = function () {
+
+            if (pwd.value.length < 6 || pwd.value.length > 16) {
+
+                text.className = 'text wrong';
+                text.innerHTML = '输入的位数有误，输入6~16位密码';
+
+
+            }
+            else {
+                text.className = 'text right';
+                text.innerHTML = '输入正确';
+
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

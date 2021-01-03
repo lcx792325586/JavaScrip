@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+
+
+        <input type="text">
+        <button>发送</button>
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        var i = 1;
+        btn.addEventListener('click', function () {
+            btn.disabled = true;
+            var time = setInterval(function () {
+
+
+                console.log(btn.disabled);
+
+
+                btn.innerHTML = '还有' + (5 - i) + '秒可以发送短信';
+                i++;
+                if (i == 5) {
+                    btn.disabled = false;
+                    console.log('i=5');
+                    window.clearInterval(time);//清楚定时器 clearInterval（定时器名字）
+                    btn.innerHTML = '发送';
+                    console.log(btn.disabled);
+                    i = 1;
+
+
+                }
+
+
+
+            }, '1000')
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        div {
+
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+
+    </div>
+    <script>
+
+        var div = document.querySelector('div');
+        document.addEventListener('click', function (e) {
+
+            console.log('x:' + (e.pageX - div.offsetLeft));
+            console.log('y:' + (e.pageY - div.offsetTop));
+            div.innerHTML = 'x:' + (e.pageX - div.offsetLeft) + ' y:' + (e.pageY - div.offsetTop);
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

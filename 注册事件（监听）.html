@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>确定</button>
+    <button>提交</button>
+    <script>
+
+        var btn = document.querySelectorAll('button');
+        btn[0].onclick = function () {
+            alert('1');
+        }
+        btn[1].onclick = function () {
+            alert('2');
+        }
+        //监听事件   可以绑定多个事件   监听对象.addEvenListenr('click/mouseover', function(){ 事件处理函数  })
+        btn[0].addEventListener('click', function () {
+
+            alert('2u');
+        }
+
+
+        );
+
+        btn[0].addEventListener('click', function () {
+
+            alert('3');
+        }
+
+
+        );
+
+    </script>
+</body>
+
+</html>

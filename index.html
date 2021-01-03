@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+</head>
+
+<body>
+    <div>
+        <p>欢迎您登陆：</p>
+
+    </div>
+    <script>
+        //  location.search 获得提交过来的数据 
+        // location.search.substr(1); 去掉问号 从0，1个位置开始截取数据 返回字符串类型
+        // console.log(location.search.substr(1).split('='));把数据用 =号隔开 返回数组类型
+
+
+        Array = location.search.substr(1).split('=');
+        console.log(Array);
+        var p = document.querySelector('p');
+        p.innerHTML = "欢迎您登陆：" + Array[1];
+    </script>
+</body>
+
+</html>

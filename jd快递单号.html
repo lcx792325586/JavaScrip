@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con {
+            display: none;
+            height: 20px;
+            width: 175px;
+            font-size: 18px;
+
+            border: 2px solid red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="con"></div>
+        <input type="text" placeholder="输入快递单号" class="input">
+    </div>
+    <script>
+        var con = document.querySelector('.con');
+        var input = document.querySelector('.input');
+
+        input.addEventListener('keyup', function (e) {
+
+            if (e.keyCode === 83) {
+                this.focus();
+            }
+            if (input.value == '')
+                con.style.display = 'none';
+            else {
+                con.style.display = 'block';
+                con.innerText = input.value;
+
+            }
+
+
+
+
+
+
+
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>halou</li>
+        <li>halou</li>
+        <li>halou</li>
+        <li>halou</li>
+        <li>halou</li>
+    </ul>
+    <script>
+        // 事件委托 给父节点设置监听 利用冒泡执行事件 ，不用单独给每个孩子循环注册事件
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click', function (e) {
+
+            // alert('点击了');
+            // console.log(e.target.style.backgroundColor);
+            for (var i = 0; i < ul.children.length; i++) {
+                ul.children[i].style.backgroundColor = 'white';
+            }
+            e.target.style.backgroundColor = 'red';
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

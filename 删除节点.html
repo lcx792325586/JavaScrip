@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>0hao</li>
+        <li>1hao</li>
+        <li>2hao</li>
+    </ul>
+    <button>删除</button>
+    <script>
+        var ul = document.querySelector('ul');
+        var btn = document.querySelector('button');
+        console.log(ul.children.length);
+
+        btn.onclick = function () {
+
+
+
+            ul.removeChild(ul.children[0]);
+
+
+
+
+
+            if (ul.children.length == 0) {
+                alert('节点已经删除完了');
+                btn.disabled = 'disabled';//节点没有后，禁止点击了
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

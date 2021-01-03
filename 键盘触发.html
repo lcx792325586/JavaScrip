@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.keyup  onkeyup 键盘弹起时触发
+        //2.keydown onkeydown 键盘按下时触发
+        //3.keypress onkeypress 键盘按下时出发   不能识别功能键 ctrl 箭头等
+        document.addEventListener('keydown', function (e) {
+
+            console.log('keydown');
+            console.log(e);
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            float: left;
+            list-style: none;
+            background-color: rgba(231, 205, 170, 0.925);
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        ul {
+
+            height: 20px;
+            width: 700px;
+
+            /* //如果这里不设置边框 会影响布局 */
+            border: 1px solid transparent;
+        }
+
+        .box {
+            margin: 100px auto;
+            width: 700px;
+            /* background-color: brown; */
+        }
+
+
+
+        .current {
+
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="tab">
+            <ul>
+                <li>商品介绍</li>
+                <li>规格包装</li>
+                <li>售后包装</li>
+                <li>商品评价</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+
+        <div class="item">商品介绍内容</div>
+        <div class="item">规格包装内容</div>
+        <div class="item">售后包装内容</div>
+        <div class="item">商品评价内容</div>
+        <div class="item">手机社区内容</div>
+    </div>
+
+    </div>
+    <script>
+        var tab = document.querySelector('.tab').querySelectorAll('li');
+        var show = document.querySelector('.box').querySelectorAll('.item');
+        for (var i = 0; i < show.length; i++) {
+
+            show[i].style.display = 'none';
+        }
+        show[0].style.display = 'block';//先让所有影藏  然后默认显示第一个模块
+        tab[0].className = 'current';
+
+        for (var i = 0; i < tab.length; i++) {
+            tab[i].setAttribute('index', i);
+
+            tab[i].onclick = function () {
+
+                for (var i = 0; i < tab.length; i++) {
+
+                    tab[i].className = '';// tab[i].className = '';排他思想 先清除所有样式   。不能用 this.className='';
+
+
+                }
+                this.className = 'current';//给当前对象添加样式
+
+
+                var index = this.getAttribute('index');
+
+                for (var i = 0; i < show.length; i++) {
+
+                    show[i].style.display = 'none';
+                }
+                show[index].style.display = 'block';
+
+
+
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

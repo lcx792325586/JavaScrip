@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+
+
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+        }
+
+        ul {
+            width: 300px;
+            height: 100px;
+            padding-left: 20px;
+            background-color: saddlebrown;
+        }
+
+        ul li {
+            width: 200px;
+            height: 20px;
+            background-color: seagreen;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>halou</div>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+</body>
+<script>
+    var div = document.querySelector('div');
+    // div.onclick = function (e) {
+
+    //     console.log(e);
+    //     alert(e);
+
+    // }
+    //时间对象e 名称可自定义   e存储的是事件（click，mousevore等）的对应的一系列属性
+    // e.target 返回是谁触发这个事件
+    //this 返回的是绑定这个事件的对象
+    // div.addEventListener('mouseover', function (e) {
+
+    //     console.log(e.target);
+    //     alert(this.innerHTML);
+    //     console.log(this);
+
+    // });
+
+    var ul = document.querySelector("ul");
+    ul.addEventListener('click', function (e) {
+
+        console.log(e.target);//返回的是谁触发的这个事件 点击li 会触发ul事件（冒泡）
+        console.log(this);//返回当前事件绑定的对象 
+
+    }
+
+
+    );
+
+
+</script>
+
+</html>

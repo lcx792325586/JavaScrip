@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+
+
+        <thead>
+            <tr>
+                <td>名字</td>
+                <td>科目</td>
+                <td>成绩</td>
+                <td>操作</td>
+
+            </tr>
+
+
+        </thead>
+        <tbody>
+
+
+        </tbody>
+
+    </table>
+    <script>
+        var date = [{
+            name: '小明',
+            subject: 'js',
+            score: 80
+
+
+
+
+        }, {
+            name: '小d东',
+            subject: 'js',
+            score: 90
+
+
+
+
+        }, {
+            name: '小n南',
+            subject: 'js',
+            score: 90
+
+
+
+
+        }, {
+            name: '小东',
+            subject: 'js',
+            score: 95
+
+
+
+
+        }]
+
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < date.length; i++) {
+
+            var tr = document.createElement('tr');//创建节点
+            tbody.appendChild(tr);//加入节点
+            for (var k in date[i])//遍历date[i]的属性 返回属性名   属性名[i]得到属性值
+            {
+
+                var td = document.createElement('td');
+                tr.appendChild(td);
+
+                td.innerHTML = date[i][k];
+
+
+
+            }
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML = '<a href="javascript:;">删除</a>';
+            //删除按钮  注册事件
+            var as = document.querySelectorAll('a');
+            as[i].onclick = function () {
+
+                tbody.removeChild(this.parentNode.parentNode);
+                //this代表当前as  删除当前行  行的爸爸是tbody
+
+
+            }
+
+
+
+
+        }
+
+		// var as =document.querySelectorAll('a');
+
+		// for(var i=0;i<date.length;i++){
+
+		// 	as[i].onclick=function(){
+		// 		tbody.removeChild(this.parentNode.parentNode);
+
+
+
+		// 	}
+
+		// }
+
+    </script>
+</body>
+
+</html>

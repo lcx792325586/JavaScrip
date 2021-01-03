@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .weixin {
+            position: relative;
+            width: 200px;
+            margin: 100px auto;
+
+        }
+
+        .weixin img {
+
+            width: 100px;
+        }
+
+        .weixin i {
+            position: absolute;
+            top: 6px;
+            left: -5px;
+            display: inline-block;
+            color: red;
+            width: 10px;
+            border: 1px solid red;
+            background-color: rosybrown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='weixin'>
+        <img src="images/weixin.jpg" alt="">
+        <i class="i">x</i>
+
+
+    </div>
+    <script>
+        var weixin = document.querySelector('.weixin');
+        var i = document.querySelector('.i');
+        i.onclick = function () {
+            weixin.style.display = 'none';
+
+        }
+
+
+    </script>
+</body>
+
+</html>
