@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入js文件 -->
+    <script src="js/animate.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            left: -80px;
+            width: 120px;
+            height: 30px;
+            background-color: aqua;
+            z-index: 0;
+        }
+
+        span {
+            text-align: center;
+            line-height: 30px;
+            position: fixed;
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            background-color: blanchedalmond;
+
+        }
+    </style>
+</head>
+<div>
+
+
+</div>
+<span>→</span>
+<script>
+
+    var div = document.querySelector('div');
+    var span = document.querySelector('span');
+    span.addEventListener('mouseenter', function () {
+
+        animate(div, 40, function () {
+            span.innerHTML = '←';
+
+        });
+
+    });
+    span.addEventListener('mouseleave', function () {
+
+        animate(div, -80, function () {
+            span.innerHTML = '→';
+
+        });
+
+    });
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
