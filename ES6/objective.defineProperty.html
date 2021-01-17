@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            id:1,
+            name:"lcx",
+            age:23
+        }
+        obj.num=43;
+        //console.log(obj);
+//        Object.defineProperties(obj,value,{})修改对象里属性的值
+Object.defineProperty(obj,'name',{
+
+    value:"hhh"//修改属性的值
+    
+})
+Object.defineProperty(obj,"id",{
+   // writable:true  id可修改
+   writable: false//id不可修改
+})
+    obj.id=2;
+    
+    Object.defineProperty(obj,"addr",{
+
+        value:'cq',
+        enumerable:true, //是否可被遍历输出来
+    configurable:true //属性不能够被删除 enumerable不能够被修改
+
+    })
+    console.log(obj);
+   var arr= Object.keys(obj);
+   var i=0;
+   arr.forEach(function(value){
+
+    i++;
+    console.log(value);
+   })
+   console.log("last:"+i);
+   Object.defineProperty(obj, "addr", {
+
+        value: 'cq',
+        enumerable: 0, //是否可被遍历输出来
+      configurable:1  //属性不能够被删除 不能够被修改了
+
+    })
+    </script>
+</body>
+</html>
